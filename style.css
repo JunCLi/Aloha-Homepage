@@ -157,7 +157,8 @@ header nav ul li {
 
 header nav ul li a {
   color: #e2574c;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway Medium', sans-serif;
+  text-transform: uppercase;
 }
 
 /* 
@@ -168,9 +169,7 @@ Hero Banner Styling
 
 .hero-banner {
   position: relative;
-  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url("images/flower-bkgd.jpg");
-  background-attachment: scroll;
-  background-repeat: repeat;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url("images/flower-bkgd.jpg") repeat-x scroll;
   background-size: 850px;
   height: 530px;
   background-position-x: -200px;
@@ -183,7 +182,8 @@ Hero Banner Styling
   left: 50%;
   transform: translate(-50%, 0%);
   font-family: 'Raleway Light', sans-serif;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  text-transform: uppercase;
 }
 
 .hero-banner h1 {
@@ -191,8 +191,9 @@ Hero Banner Styling
   top: 45%;
   left: 50%;
   transform: translate(-50%, 0);
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Playfair Display Regular', sans-serif;
   font-size: 4em;
+  font-weight: lighter;
 }
 
 /* 
@@ -206,7 +207,13 @@ Main Styling
 }
 
 #products-and-info h2 {  
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Playfair Display Italic', sans-serif;
+  font-weight: lighter;
+}
+
+#products-and-info h2 span {
+  font-family: 'Playfair Display Bold', sans-serif;
+  
 }
 
 /* 
@@ -216,17 +223,21 @@ Main Products Styling
 */
 
 .info-main {
-  margin: 75px;
+  height: 260px;
 }
 
 .info-main h2 {
+  padding-top: 50px;
   font-size: 2.5em;
 }
 
 .info-main p {
-  font-family: 'Railyway Light', sans-serif;
-  width: 600px;
+  font-family: 'Raleway Light', sans-serif;
+  padding-top: 10px;
   margin: 0 auto;
+  width: 700px;
+  font-size: 1.2em;
+  line-height: 2em;
 }
 
 .main-products {
@@ -268,7 +279,9 @@ update registration Styling
 
 #update-registration p {
   margin: 0 auto;
-  width: 600px;
+  width: 700px;
+  font-size: 1.2em;
+  line-height: 1.8em;
 }
 
 #update-registration form {
@@ -288,7 +301,6 @@ footer {
   height: 280px;
   padding: 70px 50px 60px;
   background-color: #242424;
-  font-family: 'Railway', sans-serif;
 }
 
 footer p, footer a {
@@ -309,7 +321,8 @@ Additional Information Styling
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  line-height: 0;
+  line-height: 0.5em;
+  font-family: 'Playfair Display Bold', sans-serif;
 }
 
 
@@ -328,6 +341,7 @@ Social Media Styling
   flex-flow: row nowrap;
   align-items: center;
   margin: 7px 40px 7px 7px;
+  font-family: 'Raleway Medium', sans-serif;
 }
 
 .social-media ul li i {
