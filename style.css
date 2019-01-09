@@ -115,11 +115,11 @@ header nav ul li a {
 
 /* 
 =========================
-Opening Banner Styling
+Hero Banner Styling
 =========================
 */
 
-.opening-banner {
+.hero-banner {
   position: relative;
   background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url("images/flower-bkgd.jpg");
   background-attachment: scroll;
@@ -130,7 +130,7 @@ Opening Banner Styling
   color: white;
 }
 
-.opening-banner h3 {
+.hero-banner h3 {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -139,7 +139,7 @@ Opening Banner Styling
   font-size: 1.5em;
 }
 
-.opening-banner h1 {
+.hero-banner h1 {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -154,9 +154,53 @@ Main Styling
 =========================
 */
 
-#products h2, #products p {
+#products-and-info {
   text-align: center;
+}
+
+#products-and-info h2 {  
   font-family: 'Playfair Display', sans-serif;
+}
+
+/* 
+=========================
+Main Products Styling
+=========================
+*/
+
+.info-main {
+  margin: 75px;
+}
+
+.info-main h2 {
+  font-size: 2.5em;
+}
+
+.info-main p {
+  font-family: 'Railyway Light', sans-serif;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.main-products {
+  background-color: grey;
+  height: 600px;
+}
+
+/* 
+=========================
+Favourite Products Styling
+=========================
+*/
+
+.info-favourite h2 {
+  margin: 75px;
+  font-size: 2.5em;
+}
+
+.favourite-products {
+  background-color: grey;
+  height: 400px;
 }
 
 /* 
@@ -166,7 +210,22 @@ update registration Styling
 */
 
 #update-registration {
+  height: 340px;
   text-align: center;
+}
+
+#update-registration h2 {
+  padding: 50px 0 15px;
+  font-size: 2.5em;
+}
+
+#update-registration p {
+  margin: 0 auto;
+  width: 600px;
+}
+
+#update-registration form {
+  padding: 40px 0;
 }
 
 /* 
@@ -182,6 +241,7 @@ footer {
   height: 280px;
   padding: 70px 50px 60px;
   background-color: #242424;
+  font-family: 'Railway', sans-serif;
 }
 
 footer p, footer a {
