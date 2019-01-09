@@ -6,18 +6,6 @@ General Styling
 
 @font-face {
   font-family: 'Playfair Display';
-  src: url('fonts/PlayfairDisplay-Bold.eot');
-  src: url('fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
-      url('fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
-      url('fonts/PlayfairDisplay-Bold.woff') format('woff'),
-      url('fonts/PlayfairDisplay-Bold.ttf') format('truetype'),
-      url('fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Playfair Display';
   src: url('fonts/PlayfairDisplay-Regular.eot');
   src: url('fonts/PlayfairDisplay-Regular.eot?#iefix') format('embedded-opentype'),
       url('fonts/PlayfairDisplay-Regular.woff2') format('woff2'),
@@ -29,7 +17,19 @@ General Styling
 }
 
 @font-face {
-  font-family: 'Raleway';
+  font-family: 'Playfair Display Bold';
+  src: url('fonts/PlayfairDisplay-Bold.eot');
+  src: url('fonts/PlayfairDisplay-Bold.eot?#iefix') format('embedded-opentype'),
+      url('fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+      url('fonts/PlayfairDisplay-Bold.woff') format('woff'),
+      url('fonts/PlayfairDisplay-Bold.ttf') format('truetype'),
+      url('fonts/PlayfairDisplay-Bold.svg#PlayfairDisplay-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway Light';
   src: url('fonts/Raleway-Light.eot');
   src: url('fonts/Raleway-Light.eot?#iefix') format('embedded-opentype'),
       url('fonts/Raleway-Light.woff2') format('woff2'),
@@ -53,8 +53,17 @@ General Styling
 }
 
 body {
-  width: 1240px;
   margin: 0 auto;
+  width: 1240px;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 /* 
@@ -67,6 +76,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  margin: 10px 50px;
 }
 
 #logo a img {
@@ -97,6 +107,12 @@ header nav ul li {
   width: 100px;
 }
 
+header nav ul li a {
+  color: #e2574c;
+  font-family: 'Raleway', sans-serif;
+
+}
+
 /* 
 =========================
 Opening Banner Styling
@@ -111,20 +127,25 @@ Opening Banner Styling
   background-size: 850px;
   height: 530px;
   background-position-x: -200px;
-}
-
-.opening-banner h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  color: white;
 }
 
 .opening-banner h3 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
+  font-family: 'Raleway Light', sans-serif;
+  font-size: 1.5em;
+}
+
+.opening-banner h1 {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 4em;
 }
 
 /* 
@@ -165,12 +186,10 @@ footer {
 
 footer p, footer a {
   color: white;
-  text-decoration: none;
 }
 
 footer a:hover {
   color: white;
-  text-decoration: none;
 }
 
 /* 
