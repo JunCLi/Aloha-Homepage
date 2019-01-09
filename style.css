@@ -32,3 +32,15 @@ header nav ul {
 header nav ul li {
   width: 100px;
 }
+
+/* 
+=========================
+Footer Styling
+=========================
+*/
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
