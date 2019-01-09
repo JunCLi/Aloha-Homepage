@@ -115,6 +115,20 @@ footer p, footer a {
   text-decoration: none;
 }
 
+/* 
+=========================
+Additional Information Styling
+=========================
+*/
+
+.additional-information {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  line-height: 0;
+}
+
+
 .address-information p {
   color: #969696;
 }
