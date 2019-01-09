@@ -4,6 +4,10 @@ General Styling
 =========================
 */
 
+body {
+  width: 1240px;
+  margin: 0 auto;
+}
 
 /* 
 =========================
@@ -15,6 +19,16 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+
+#logo a img {
+  width: 150px;
+  height: 75px;
+}
+
+#shopping-cart a img {
+  width: 70px;
+  height: 70px;
 }
 
 /* 
@@ -35,6 +49,56 @@ header nav ul li {
 
 /* 
 =========================
+Opening Banner Styling
+=========================
+*/
+
+.opening-banner {
+  position: relative;
+  background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2)), url("images/flower-bkgd.jpg");
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: 850px;
+  height: 530px;
+  background-position-x: -200px;
+}
+
+.opening-banner h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.opening-banner h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 
+=========================
+Main Styling
+=========================
+*/
+
+#products h2, #products p {
+  text-align: center;
+}
+
+/* 
+=========================
+update registration Styling
+=========================
+*/
+
+#update-registration {
+  text-align: center;
+}
+
+/* 
+=========================
 Footer Styling
 =========================
 */
@@ -43,4 +107,14 @@ footer {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  background-color: #242424;
+}
+
+footer p, footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.address-information p {
+  color: #969696;
 }
