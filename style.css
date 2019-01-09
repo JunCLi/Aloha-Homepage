@@ -1,0 +1,34 @@
+/* 
+=========================
+General Styling
+=========================
+*/
+
+
+/* 
+=========================
+Header Styling
+=========================
+*/
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+/* 
+=========================
+Navigation Styling
+=========================
+*/
+
+header nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+header nav ul li {
+  width: 100px;
+}
