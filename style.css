@@ -340,7 +340,26 @@ Favourite Products Styling
   align-items: center;
 }
 
-.favourite-products ul li {
+.favourite-products ul li a img {
+  height: 85%;
+  width: 85%;
+}
+
+.favourite-products ul li a p {
+  color: #969696;
+  font-family: 'Raleway Medium', sans-serif;
+}
+
+.descriptor {
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.item-name {
+  color: #e2574c;
+  font-family: 'Playfair Display Regular', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
 }
 
 /* 
