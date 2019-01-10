@@ -1,0 +1,87 @@
+/*
+=========================
+General Styling
+=========================
+*/
+
+body {
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/*
+=========================
+Header Styling
+=========================
+*/
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 3% auto 0;
+}
+
+#logo {
+  width: 30%;
+}
+
+#logo a img {
+  width: 100%;
+}
+
+#shopping-cart {
+  width: 15%; height: 15%;
+}
+
+#shopping-cart a img {
+  width: 100%;
+}
+
+/*
+=========================
+Header Styling
+=========================
+*/
+
+header nav {
+  order: 1;
+  margin: 2% 0;
+  width: 100%;  
+}
+
+header nav ul {
+  border-top: 1px solid #d7d7d7;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 3% 3%;
+}
+
+header nav ul li {
+  text-align: center;
+  width: 100px;
+}
+
+header nav ul li a {
+  color: #e2574c;
+  font-family: 'Raleway Light', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/*
+=========================
+Hero Banner Styling
+=========================
+*/
