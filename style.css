@@ -269,7 +269,7 @@ Favourite Products Styling
 
 /* 
 =========================
-update registration Styling
+Registration Form Styling
 =========================
 */
 
@@ -286,6 +286,7 @@ update registration Styling
 #update-registration h2 {
   padding: 50px 0 15px;
   font-size: 2.5em;
+  text-shadow: 3px 3px 20px black;
 }
 
 #update-registration p {
@@ -301,30 +302,33 @@ update registration Styling
 
 /* 
 =========================
-Registration Form Styling
+Email Submission Styling
 =========================
 */
 
-.registration-form input {
+.email-submission input {
   position: relative;
   border: 0px solid white;
   border-radius: 50px;
 }
 
 #user-email {
-  padding: 10px;
+  padding: 11px 30px;
   width: 35%;
+  color: #969696;
+  font-family: 'Raleway Light', sans-serif;
 }
 
 #subscribe-email {
-  color: white;
-  background-color: #e2574c;
-  right: 38.2%;
-  margin: 6px;
-  padding: 6px;
+  right: 38.1%;
+  margin: 4px 6px;
+  padding: 7px;
   position: absolute;
   text-align: center;
   width: 120px;
+  color: white;
+  background-color: #e2574c;
+  font-family: 'Raleway Medium', sans-serif;
 }
 
 
