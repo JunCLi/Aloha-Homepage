@@ -258,61 +258,62 @@ Main Products Styling
 }
 
 .main-products {
-  height: 400px;
+  height: 600px;
 }
 
 .main-products ul {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 10px 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "a a b c"
+    "d e f f";
 }
 
-.main-products ul li {
-  height: 300px;
-}
 .main-products ul li a {
   display: inline-block;
   width: 100%;
   height: 100%;
+  line-height: 300px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
 }
 
 .product-men {
-  width: 49.2%;
-  margin-right: .8%;
+  grid-area: a;
   background: url(images/mens-category.jpg) center no-repeat;
   background-size: 100% 100%;
 }
 
 .product-trends {
-  width: 24.1%;
+  grid-area: b;
   background: url(images/trends-category.jpg) center no-repeat;
   background-size: 100% 100%;
 }
 
 .product-glasses {
-  width: 24.1%;
-  margin-left: .8%;
+  grid-area: c;
   background: url(images/glasses-category.jpg) center no-repeat;
   background-size: 100% 100%;
 }
 
 .product-sale {
-  width: 24.1%;
-  margin-right: .8%;
+  grid-area: d;
   background: url(images/sale-category.jpg) center no-repeat;
   background-size: 100% 100%;
 }
 
 .product-bags {
-  width: 24.1%;
+  grid-area: e;
   background: url(images/bags-category.jpg) center no-repeat;
   background-size: 100% 100%;
 }
 
 .product-women {
-  width: 49.2%;
-  margin-left: .8%;
+  grid-area: f;
   background: url(images/womens-category.jpg) center no-repeat;
   background-size: 100% 100%;
 }
@@ -324,13 +325,22 @@ Favourite Products Styling
 */
 
 .info-favourite h2 {
-  margin: 75px;
-  font-size: 2.5em;
+  margin: 70px 0 25px;
+  font-size: 2.2em;
 }
 
 .favourite-products {
-  background-color: grey;
-  height: 400px;
+  height: 500px;
+}
+
+.favourite-products ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.favourite-products ul li {
 }
 
 /* 
