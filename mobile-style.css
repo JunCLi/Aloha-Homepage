@@ -254,3 +254,66 @@ Main Products Styling
   background: url(images/womens-category.jpg) center no-repeat;
   background-size: 100%;
 }
+
+/* 
+=========================
+Footer Styling
+=========================
+*/
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 70px 50px 60px;
+  background-color: #242424;
+}
+
+footer p, footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* 
+=========================
+Additional Information Styling
+=========================
+*/
+
+.additional-information {
+  font-family: 'Playfair Display Bold', sans-serif;
+}
+
+
+.address-information p {
+  color: #969696;
+}
+
+/* 
+=========================
+Social Media Styling
+=========================
+*/
+
+.social-media {
+  width: 50%;
+}
+
+.social-media ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.social-media ul a {
+  padding: 10% 30%;
+}
+
+.social-media ul li a p {
+  display: none;
+}
