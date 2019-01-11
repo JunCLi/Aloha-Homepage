@@ -97,6 +97,10 @@ Hero Banner Styling
   z-index: -2;
 }
 
+.hero-banner h1, .hero-banner h3 {
+  text-align: center;
+}
+
 .hero-banner h3 {
   position: absolute;
   top: 35%;
@@ -116,7 +120,6 @@ Hero Banner Styling
   font-size: 3em;
   font-weight: lighter;
   line-height: 1em;
-  text-align: center;
 }
 
 .hero-banner div {
@@ -265,6 +268,27 @@ Favourite Products Styling
   display: none;
 }
 
+.favourite-products ul li a img { 
+  width: 85%;
+}
+
+.favourite-products ul li a p {
+  color: #969696;
+  font-family: 'Raleway Medium', sans-serif;
+}
+
+.descriptor {
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.item-name {
+  color: #e2574c;
+  font-family: 'Playfair Display Regular', sans-serif;
+  font-weight: lighter;
+  font-size: 1.5em;
+}
+
 /* 
 =========================
 Registration Form Styling
@@ -293,8 +317,7 @@ Registration Form Styling
   line-height: 1.8em;
 }
 
-#update-registration form {
-  font-size: 1.4em;
+#update-registration form { 
   padding: 5% 0 12.5%;
 }
 
