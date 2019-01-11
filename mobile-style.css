@@ -257,6 +257,79 @@ Main Products Styling
 
 /* 
 =========================
+Favourite Products Styling
+=========================
+*/
+
+.favourite-item-2, .favourite-item-3, .favourite-item-4 {
+  display: none;
+}
+
+/* 
+=========================
+Registration Form Styling
+=========================
+*/
+
+#update-registration {
+  margin: 1% 0;
+  background-size: 100% 255%;
+  color: white;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/wave-bkgd.jpg) bottom no-repeat;
+
+}
+
+#update-registration h2 {
+  margin: 0;
+  padding: 10% 0 2%;
+  font-size: 2.5em;
+}
+
+#update-registration p {
+  margin: 0;
+  padding: 2% 2.5%;
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+
+#update-registration form {
+  font-size: 1.4em;
+  padding: 5% 0 12.5%;
+}
+
+/* 
+=========================
+Email Submission Styling
+=========================
+*/
+
+.email-submission input {
+  position: relative;
+  border: 0px solid white;
+  border-radius: 50px;
+}
+
+#user-email {
+  color: #969696;
+  font-family: 'Raleway Light', sans-serif;
+  padding: 5%;
+  height: 0;
+  width: 80%;
+}
+
+#subscribe-email {
+  text-align: center;
+  color: white;
+  background-color: #e2574c;
+  font-family: 'Raleway Medium', sans-serif;
+  padding: 4.4%;
+  height: 0;
+  width: 30%;
+}
+
+/* 
+=========================
 Footer Styling
 =========================
 */
