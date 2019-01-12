@@ -264,8 +264,16 @@ Favourite Products Styling
 =========================
 */
 
-.favourite-item-2, .favourite-item-3, .favourite-item-4 {
+.favourite-products ul {
+  margin-bottom: 20%;
+}
+
+.favourite-products ul li {
   display: none;
+}
+
+.favourite-item-1.display-item {
+  display: inline-block;
 }
 
 .favourite-products ul li a img { 
@@ -296,7 +304,7 @@ Registration Form Styling
 */
 
 #update-registration {
-  margin: 1% 0;
+  margin: 2% 0;
   background-size: 100% 255%;
   color: white;
   text-align: center;
@@ -317,7 +325,8 @@ Registration Form Styling
   line-height: 1.8em;
 }
 
-#update-registration form { 
+#update-registration form {
+  position: relative;
   padding: 5% 0 12.5%;
 }
 
@@ -328,7 +337,6 @@ Email Submission Styling
 */
 
 .email-submission input {
-  position: relative;
   border: 0px solid white;
   border-radius: 50px;
 }
@@ -342,11 +350,14 @@ Email Submission Styling
 }
 
 #subscribe-email {
-  text-align: center;
+  display: inline-block;
+  position: absolute;
+  top: 21%;
+  left: 59%;
   color: white;
   background-color: #e2574c;
   font-family: 'Raleway Medium', sans-serif;
-  padding: 4.4%;
+  padding: 4.2%;
   height: 0;
   width: 30%;
 }
@@ -363,7 +374,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 70px 50px 60px;
+  padding: 7.5%;
   background-color: #242424;
 }
 
@@ -382,9 +393,23 @@ Additional Information Styling
 */
 
 .additional-information {
+  display: flex;
+  flex-flow: column nowrap;
   font-family: 'Playfair Display Bold', sans-serif;
+  margin: 5% 0;
 }
 
+.additional-information div {
+  margin: 5% 0;
+}
+
+.additional-information div p {
+  margin: 0;
+}
+
+.fa-copyright {
+  width: 7.5%;
+}
 
 .address-information p {
   color: #969696;
@@ -397,7 +422,7 @@ Social Media Styling
 */
 
 .social-media {
-  width: 50%;
+  width: 40%;
 }
 
 .social-media ul {
