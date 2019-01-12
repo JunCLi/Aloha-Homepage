@@ -128,17 +128,17 @@ Hero Banner Styling
   height: 100%;
 }
 
-.hero-banner h3, .hero-banner h1 {
-  margin: 3% 5%;
+.hero-banner-text h3, .hero-banner-text h1 {
+  margin: 3% 0;
 }
 
-.hero-banner h3 {
+.hero-banner-text h3 {
   font-family: 'Raleway Medium', sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
 }
 
-.hero-banner h1 {
+.hero-banner-text h1 {
   order: 1;
   font-family: 'Playfair Display Regular', sans-serif;
   font-size: 3em;
@@ -153,6 +153,12 @@ Hero Banner Styling
   width: 100%;
   height: 108%;
   z-index: -1;
+}
+
+@media screen and (min-width: 600px) {
+  .hero-banner h1 {
+    font-size: 3.5em;
+  }
 }
 
 /* 
@@ -227,7 +233,6 @@ Main Products Styling
 }
 
 .main-products ul li h5 {
-  margin: 0;
   color: white;
   font-family: 'Raleway Light', sans-serif;
   font-size: 2em;
@@ -281,6 +286,16 @@ Main Products Styling
   grid-area: f;
   background: url(images/womens-category.jpg) center no-repeat;
   background-size: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .main-products ul {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "a a b c"
+      "d e f f";
+  }
 }
 
 /* 
