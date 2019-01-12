@@ -174,7 +174,7 @@ main {
 
 main article {
   margin: 0 auto;
-  padding: 12% 0;
+  padding: 10% 0;
 }
 
 #products-and-info h2 {  
@@ -205,19 +205,37 @@ Main Products Styling
   font-size: 1.3em;
   line-height: 2em;
   padding: 3% 0;
+  margin: 0;
+}
+
+:root {
+  --wrapperWidth: 100vw;
+  --gutter: 10px;
+  --noOfColumns: 2;
+
+  --noOfGutters: calc(var(--noOfColumns) - 1);
+
+  --ratioA: 1;
+  --ratioB: 2;
+
+  --rowHeight: calc((var(--wrapperWidth) - (var(--noOfGutters) * var(--gutter))) / var(--noOfColumns));
+}
+
+.main-products ul {
+  width: var(--wrapperWidth);
+  display: grid;
+  grid-gap: var(--gutter);
+  grid-template-columns: repeat(var(--noOfColumns), 1fr);
+  grid-auto-rows: var(--rowHeight);
+  grid-template-areas:
+    "a a"
+    "b c"
+    "d e"
+    "f f";
 }
 
 .main-products ul li {
-  height: 0;
   position: relative;
-}
-
-.main-products .wide-pic {
-  padding-top: 50%;
-}
-
-.main-products .square-pic {
-  padding-top: 100%;
 }
 
 .main-products ul li a {
@@ -236,20 +254,8 @@ Main Products Styling
   color: white;
   font-family: 'Raleway Light', sans-serif;
   font-size: 2em;
-  text-shadow: 2px 2px 5px rgb(100, 100, 100);
+  text-shadow: 2px 2px 5px rgb(50, 50, 50);
   text-transform: uppercase;
-}
-
-.main-products ul {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "a a"
-    "b c"
-    "d e"
-    "f f";
 }
 
 .product-men {
@@ -289,9 +295,14 @@ Main Products Styling
 }
 
 @media screen and (min-width: 600px) {
+  :root {
+    --noOfColumns: 4;
+    --noOfGutters: calc(var(--noOfColumns) - 1);
+    --rowHeight: calc((var(--wrapperWidth) - (var(--noOfGutters) * var(--gutter))) / var(--noOfColumns));
+  }
   .main-products ul {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: var(--rowHeight);
     grid-template-areas:
       "a a b c"
       "d e f f";
