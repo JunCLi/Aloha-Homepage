@@ -7,6 +7,7 @@ General Styling
 body {
   font-size: 14px;
   margin: 0 auto;
+  max-width: 1240px;
 }
 
 a {
@@ -306,6 +307,12 @@ Main Products Styling
     grid-template-areas:
       "a a b c"
       "d e f f";
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  :root {
+    --wrapperWidth: 1240px;
   }
 }
 
