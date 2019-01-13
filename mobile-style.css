@@ -432,8 +432,8 @@ Footer Styling
 footer {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   align-items: center;
+  justify-items: center;
   text-align: center;
   padding: 7.5%;
   background-color: #242424;
@@ -445,6 +445,14 @@ footer p, footer a {
 
 footer a:hover {
   color: white;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    text-align: left;
+  }
 }
 
 /* 
@@ -461,7 +469,7 @@ Additional Information Styling
 }
 
 .additional-information div {
-  margin: 5% 0;
+  margin: 2.5% 0;
 }
 
 .additional-information div p {
@@ -483,7 +491,7 @@ Social Media Styling
 */
 
 .social-media {
-  width: 40%;
+  margin: 2.5% 0;
 }
 
 .social-media ul {
@@ -492,10 +500,29 @@ Social Media Styling
   justify-content: space-around;
 }
 
-.social-media ul a {
-  padding: 10% 30%;
+.social-media ul li i {
+  width: 10px;
+}
+
+.social-media ul li a {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin: 7px 20px 7px 7px;
+  font-family: 'Raleway Medium', sans-serif;
 }
 
 .social-media ul li a p {
   display: none;
+  margin: 0 0 0 20px;
+}
+
+@media screen and (min-width: 600px) {
+  .social-media ul {
+    flex-flow: column nowrap;
+  }
+
+  .social-media ul li a p {
+    display: inline-block;
+  }
 }
