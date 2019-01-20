@@ -324,27 +324,15 @@ Favourite Products Styling
 =========================
 */
 
-.favourite-products ul {
-  display: flex;
-  justify-content: center;
+.favourite-products {
   margin-bottom: 20%;
 }
 
-.favourite-products ul li {
-  display: none;
+.favourite-products a {
+  width: 100%;
 }
 
-.favourite-item-1.display-item {
-  display: inline-block;
-}
-
-.favourite-item-2.display-item
-
-.favourite-products ul li a img { 
-  width: 85%;
-}
-
-.favourite-products ul li a p {
+.favourite-products p {
   color: #969696;
   font-family: 'Raleway Medium', sans-serif;
 }
@@ -359,12 +347,6 @@ Favourite Products Styling
   font-family: 'Playfair Display Regular', sans-serif;
   font-weight: lighter;
   font-size: 1.5em;
-}
-
-@media screen and (min-width: 600px) {
-  .favourite-item-2.display-item {
-    display: inline-block;
-  }
 }
 
 /* 
