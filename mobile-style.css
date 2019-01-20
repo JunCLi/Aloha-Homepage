@@ -4,6 +4,10 @@ General Styling
 =========================
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 14px;
   margin: 0 auto;
@@ -180,8 +184,9 @@ main article {
   padding: 10% 0;
 }
 
-#products-and-info h2 {  
+#products-and-info h2 { 
   font-family: 'Playfair Display Italic', sans-serif;
+  font-size: 3em;
   font-weight: lighter; 
 }
 
@@ -195,15 +200,11 @@ Main Products Styling
 =========================
 */
 
-.info-main {
+#info-main {
   width: 90%;
 }
 
-#products-and-info h2 {
-  font-size: 3em;
-}
-
-.info-main p {
+#info-main p {
   font-family: 'Raleway Medium', sans-serif;
   font-size: 1.3em;
   line-height: 2em;
@@ -224,7 +225,7 @@ Main Products Styling
   --rowHeight: calc((var(--wrapperWidth) - (var(--noOfGutters) * var(--gutter))) / var(--noOfColumns));
 }
 
-.main-products ul {
+#main-products ul {
   width: var(--wrapperWidth);
   display: grid;
   grid-gap: var(--gutter);
@@ -237,11 +238,11 @@ Main Products Styling
     "f f";
 }
 
-.main-products ul li {
+#main-products ul li {
   position: relative;
 }
 
-.main-products ul li a {
+#main-products ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,7 +254,7 @@ Main Products Styling
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.main-products ul li h5 {
+#main-products ul li h5 {
   color: white;
   font-family: 'Raleway Light', sans-serif;
   font-size: 2em;
@@ -303,7 +304,7 @@ Main Products Styling
     --noOfGutters: calc(var(--noOfColumns) - 1);
     --rowHeight: calc((var(--wrapperWidth) - (var(--noOfGutters) * var(--gutter))) / var(--noOfColumns));
   }
-  .main-products ul {
+  #main-products ul {
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: var(--rowHeight);
     grid-template-areas:
