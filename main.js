@@ -1,13 +1,28 @@
+$('.amount-in-cart').slideUp(1);
+
 (function($, window, document) {
 
-  const tractItemsInCart = () => {
-    let $itemsInCart = $('.items-in-cart');
-    updateNumberOfItems = parseInt($itemsInCart.html(), 10) + 1;
-    $itemsInCart.html(updateNumberOfItems);
+  const updateTotalNumberInCart = () => {
+    let $totalItemsInCart = $('.items-in-cart');
+    let updateTotalNumber = parseInt($totalItemsInCart.html(), 10) + 1;
+    $totalItemsInCart.html(updateTotalNumber);
   };
 
+  const updateItemInCart = (event) => {
+    let $ItemsInCart = $(event.currentTarget).next().find('.currently-in-cart');
+    let updateItemsInCart = parseInt($ItemsInCart.val(), 10) + 1;
+    $ItemsInCart.val(updateItemsInCart);
+  }
+
+  const showAmountInCart = event => {
+    let $amountInCart = $(event.currentTarget).next();
+    $amountInCart.slideDown();
+  }
+
   $('.add-to-cart').on('click', event => {
-    tractItemsInCart();
+    showAmountInCart(event);
+    updateTotalNumberInCart();
+    updateItemInCart(event);
   });
 
 

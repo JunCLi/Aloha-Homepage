@@ -404,6 +404,27 @@ Favourite Products Styling
   padding: 5%;
 }
 
+.amount-in-cart {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.amount-in-cart input {
+  border: 1px solid black;
+  text-align: center;
+  margin: 0 2px;
+  width: 20%;
+}
+
+.amount-in-cart button {
+  background-color: #e2574c;
+  border: 0px solid white;
+  border-radius: 3px;
+  width: 25px;
+}
+
 /* 
 =========================
 Registration Form Styling
