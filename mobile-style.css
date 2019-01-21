@@ -159,7 +159,7 @@ Hero Banner Styling
 }
 
 .hero-banner-text h3 {
-  font-family: 'Raleway Medium', sans-serif;
+  font-family: 'Raleway Light', sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
 }
@@ -443,13 +443,13 @@ Email Submission Styling
   display: inline-block;
   position: absolute;
   top: 32.5%;
-  left: 55.2%;
+  left: 60.2%;
   color: white;
   background-color: #e2574c;
   font-family: 'Raleway Medium', sans-serif;
-  padding: 3% 4.2%;
+  padding: 3% 0%;
   height: 0;
-  width: 30%;
+  width: 25%;
 }
 
 /* 
