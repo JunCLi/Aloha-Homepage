@@ -1,15 +1,14 @@
-
 (function($, window, document) {
   
   const initializeWebpage = () => {
     $('.amount-in-cart').slideUp(1);
-    displayTotalItemsInCart();
+    $('.items-in-cart').hide();
   }
   
   const displayTotalItemsInCart = () => {
     const $totalItemsInCart = $('.items-in-cart');
     if ($totalItemsInCart.html() === '0') {
-      $totalItemsInCart.hide();
+      $totalItemsInCart.hide(500);
     } else {
       $totalItemsInCart.show(500);
     }
@@ -29,7 +28,7 @@
 
   const updateItemInCart = (inCart, plusOrMinus = true) => {
     const $itemsInCart = inCart.find('.currently-in-cart');
-    let newItemsInCart = parseInt($itemsInCart.val(), 10);
+    let newItemsInCart = +$itemsInCart.val();
     if (plusOrMinus) {
       newItemsInCart++;
     } else {
@@ -59,7 +58,6 @@
     updateTotalNumberInCart();
   });
 
-
   const validateEmail = (email) => {
     const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailRegex.test(email);
@@ -73,12 +71,11 @@
     } else {
       alert('Please enter a valid email address');
     }
-    
   });
 
   $('.favourite-products ul').flickity({
     wrapAround: true,
-    // autoPlay: 4000,
+    autoPlay: 4000,
     imagesLoaded: true
   });
 
