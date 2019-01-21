@@ -364,7 +364,7 @@ Favourite Products Styling
 }
 
 .favourite-products li {
-  margin: 0 5% 1em;
+  margin: 0 5%;
 }
 
 .favourite-products a {
@@ -408,7 +408,7 @@ Favourite Products Styling
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  margin: 20px auto;
+  margin-top: 10px;
 }
 
 .amount-in-cart input {

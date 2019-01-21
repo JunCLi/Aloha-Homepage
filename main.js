@@ -1,28 +1,62 @@
-$('.amount-in-cart').slideUp(1);
 
 (function($, window, document) {
+  
+  const initializeWebpage = () => {
+    $('.amount-in-cart').slideUp(1);
+    displayTotalItemsInCart();
+  }
+  
+  const displayTotalItemsInCart = () => {
+    const $totalItemsInCart = $('.items-in-cart');
+    if ($totalItemsInCart.html() === '0') {
+      $totalItemsInCart.hide();
+    } else {
+      $totalItemsInCart.show(500);
+    }
+  }
+  
+  initializeWebpage();
 
-  const updateTotalNumberInCart = () => {
-    let $totalItemsInCart = $('.items-in-cart');
-    let updateTotalNumber = parseInt($totalItemsInCart.html(), 10) + 1;
-    $totalItemsInCart.html(updateTotalNumber);
+  const updateTotalNumberInCart = (plusOrMinus = true) => {    
+    const $allItemsInCart = $('.currently-in-cart');
+    let sumAllItems = 0;
+    $allItemsInCart.each( cart => {
+      sumAllItems += +$($allItemsInCart[cart]).val();
+    });
+    $('.items-in-cart').html(sumAllItems);
+    displayTotalItemsInCart();
   };
 
-  const updateItemInCart = (event) => {
-    let $ItemsInCart = $(event.currentTarget).next().find('.currently-in-cart');
-    let updateItemsInCart = parseInt($ItemsInCart.val(), 10) + 1;
-    $ItemsInCart.val(updateItemsInCart);
+  const updateItemInCart = (inCart, plusOrMinus = true) => {
+    const $itemsInCart = inCart.find('.currently-in-cart');
+    let newItemsInCart = parseInt($itemsInCart.val(), 10);
+    if (plusOrMinus) {
+      newItemsInCart++;
+    } else {
+      newItemsInCart > 0 ? newItemsInCart-- : newItemsInCart;
+    }
+    $itemsInCart.val(newItemsInCart);
   }
 
   const showAmountInCart = event => {
-    let $amountInCart = $(event.currentTarget).next();
+    const $amountInCart = $(event.currentTarget).next();
     $amountInCart.slideDown();
   }
 
+  $('.increase-incart').on('click', event => {
+    updateItemInCart($(event.currentTarget).closest('div'));
+    updateTotalNumberInCart();
+  });
+
+  $('.decrease-incart').on('click', event => {
+    updateItemInCart($(event.currentTarget).closest('div'), false);
+    updateTotalNumberInCart(false);
+  });
+
   $('.add-to-cart').on('click', event => {
     showAmountInCart(event);
+    updateItemInCart($(event.currentTarget).next());
     updateTotalNumberInCart();
-    updateItemInCart(event);
   });
 
 
