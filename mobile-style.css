@@ -364,7 +364,7 @@ Favourite Products Styling
 }
 
 .favourite-products li {
-  margin: 0 5%;
+  margin: 0 5% 1em;
 }
 
 .favourite-products a {
@@ -402,7 +402,6 @@ Favourite Products Styling
   font-family: 'Raleway Medium', sans-serif;
   height: 0;
   padding: 5%;
-  margin-bottom: 1em;
 }
 
 /* 
