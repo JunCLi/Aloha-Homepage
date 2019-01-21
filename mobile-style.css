@@ -59,11 +59,26 @@ header {
 #shopping-cart {
   width: 15%;
   height: 15%;
-  max-width: 60px
+  max-width: 60px;
+  position: relative;
 }
 
 #shopping-cart a img {
   width: 100%;
+}
+
+.items-in-cart {
+  background-color: #e2574c;
+  border: 0px solid white;
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  margin: 0;
+  padding: 10%;
+  position: absolute;
+  top: 65%;
+  left: 65%;
+  opacity: 0.8;
 }
 
 @media screen and (min-width: 600px) {
