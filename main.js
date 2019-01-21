@@ -1,27 +1,12 @@
 (function($, window, document) {
 
-  $(window).scroll(() => {
-    if ($(window).scrollTop() >= 200) {
-      $('header').addClass('fixed-nav');
-    } else {
-      $('header').removeClass('fixed-nav');
-    }
-  });
-
-  // let timeout = null;
   // $(window).scroll(() => {
-  //   if (!timeout) {
-  //     timeout = setTimeout(function () {
-  //       console.log('scroll');            
-  //       clearTimeout(timeout);
-  //       timeout = null;
-  //       if ($(window).scrollTop() >= 200) {
-  //           console.log('done scrolling');
-  //         }
-  //       }, 250);
-  //     }
+  //   if ($(window).scrollTop() >= 200) {
+  //     $('header').addClass('fixed-nav');
+  //   } else {
+  //     $('header').removeClass('fixed-nav');
+  //   }
   // });
-
 
   const validateEmail = (email) => {
     let $emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -35,12 +35,16 @@ Header Styling
 */
 
 header {
+  position: sticky;
+  top: 0px;
+  background-color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  width: 95%;
-  margin: 3% auto 3%;
+  width: 100%;
+  padding: 2% 5%;
+  z-index: 5;
 }
 
 #logo {
@@ -67,27 +71,19 @@ header {
   }
 }
 
-.fixed-nav {
-  position: fixed;
-  background-color: white;
-  z-index: 5;
-}
-
-
-
 /*
 =========================
 Navigation Styling
 =========================
 */
 
-header nav {
+.top-nav {
   order: 1;
   margin: 2% 0 0;
   width: 100%;
 }
 
-header nav ul {
+.top-nav ul {
   border-top: 1px solid #d7d7d7;
   display: flex;
   flex-flow: row nowrap;
@@ -96,24 +92,29 @@ header nav ul {
   padding: 3% 3% 0;
 }
 
-header nav ul li {
+.top-nav ul li {
   text-align: center;
   width: 100px;
 }
 
-header nav ul li a {
+.top-nav ul li a {
   color: #e2574c;
   font-family: 'Raleway Light', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
 }
 
+.top-nav ul li a:hover {
+  color: #e2574c;
+}
+
+
 @media screen and (min-width: 600px) {
-  header nav {
+  .top-nav {
     order: 0;
   }
 
-  header nav ul {
+  .top-nav ul {
     padding: 0 5%;
     border-top: 0px solid white;
   }
