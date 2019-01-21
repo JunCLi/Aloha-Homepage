@@ -67,6 +67,14 @@ header {
   }
 }
 
+.fixed-nav {
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+}
+
+
+
 /*
 =========================
 Navigation Styling
