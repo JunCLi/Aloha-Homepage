@@ -81,6 +81,7 @@ header {
   height: 40%;
   width: 40%; 
 
+  color: white;
   background-color: #e2574c;
   border: 0px solid white;
   border-radius: 50%;
@@ -168,7 +169,7 @@ Hero Banner Styling
   
   height: 530px;
   
-  background: url("images/flower-bkgd.jpg") repeat-x center scroll;
+  background: url("../images/flower-bkgd.jpg") repeat-x center scroll;
   background-size: 850px;
   background-position-x: -200px;
   color: white;
@@ -210,7 +211,7 @@ Hero Banner Styling
   width: 100%;
   height: 108%;
 
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/banner-girl.png") no-repeat scroll bottom;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/banner-girl.png") no-repeat scroll bottom;
   background-size: auto 85%;
 }
 
@@ -319,42 +320,42 @@ Main Products Styling
 .product-men {
   grid-area: a;
 
-  background: url(images/mens-category.jpg) center no-repeat;
+  background: url(../images/mens-category.jpg) center no-repeat;
   background-size: 100%;
 }
 
 .product-trends {
   grid-area: b;
 
-  background: url(images/trends-category.jpg) center no-repeat;
+  background: url(../images/trends-category.jpg) center no-repeat;
   background-size: 100%;
 }
 
 .product-glasses {
   grid-area: c;
 
-  background: url(images/glasses-category.jpg) center no-repeat;
+  background: url(../images/glasses-category.jpg) center no-repeat;
   background-size: 100%;
 }
 
 .product-sale {
   grid-area: d;
 
-  background: url(images/sale-category.jpg) center no-repeat;
+  background: url(../images/sale-category.jpg) center no-repeat;
   background-size: 100%;
 }
 
 .product-bags {
   grid-area: e;
 
-  background: url(images/bags-category.jpg) center no-repeat;
+  background: url(../images/bags-category.jpg) center no-repeat;
   background-size: 100%;
 }
 
 .product-women {
   grid-area: f;
 
-  background: url(images/womens-category.jpg) center no-repeat;
+  background: url(../images/womens-category.jpg) center no-repeat;
   background-size: 100%;
 }
 
@@ -465,11 +466,11 @@ Registration Form Styling
 
 #update-registration {
   margin: 2% 0;
-  padding: 10% 2%;
+  padding: 7.5% 2%;
 
   color: white;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/wave-bkgd.jpg) bottom no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/wave-bkgd.jpg) bottom no-repeat;
   background-size: 100% 250%;
 }
 
