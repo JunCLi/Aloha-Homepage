@@ -1,18 +1,9 @@
 (function($, window, document) {
 
-  // $(window).scroll(() => {
-  //   if ($(window).scrollTop() >= 200) {
-  //     $('header').addClass('fixed-nav');
-  //   } else {
-  //     $('header').removeClass('fixed-nav');
-  //   }
-  // });
-
   const validateEmail = (email) => {
-    let $emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const $emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return $emailRegex.test(email);
   };
-
 
   $('#subscribe-email').on('click', event => {
     event.preventDefault();
@@ -24,10 +15,6 @@
     }
     
   });
-
-
-
-
 
   $('.favourite-products ul').flickity({
     wrapAround: true,

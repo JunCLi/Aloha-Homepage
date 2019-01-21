@@ -57,7 +57,8 @@ header {
 }
 
 #shopping-cart {
-  width: 15%; height: 15%;
+  width: 15%;
+  height: 15%;
   max-width: 60px
 }
 
@@ -69,6 +70,15 @@ header {
   header {
     flex-flow: row nowrap;
   }
+
+  #logo {
+    min-width: 100px;
+  }
+
+  #shopping-cart {
+    min-width: 40px;
+    min-height: 40px;
+  }
 }
 
 /*
@@ -79,7 +89,7 @@ Navigation Styling
 
 .top-nav {
   order: 1;
-  margin: 2% 0 0;
+  margin: 1.5% 0 0;
   width: 100%;
 }
 
@@ -94,7 +104,7 @@ Navigation Styling
 
 .top-nav ul li {
   text-align: center;
-  width: 100px;
+  padding: 0 15px;
 }
 
 .top-nav ul li a {
@@ -247,11 +257,11 @@ Main Products Styling
     "f f";
 }
 
-#main-products ul li {
+#main-products li {
   position: relative;
 }
 
-#main-products ul li a {
+#main-products li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -263,7 +273,7 @@ Main Products Styling
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-#main-products ul li h5 {
+#main-products h5 {
   color: white;
   font-family: 'Raleway Light', sans-serif;
   font-size: 2em;
@@ -335,11 +345,21 @@ Favourite Products Styling
 */
 
 .favourite-products {
-  margin-bottom: 20%;
+  margin-bottom: 5em;
+}
+
+.favourite-products li {
+  margin: 0 5%;
 }
 
 .favourite-products a {
   width: 100%;
+  text-align: center;
+}
+
+.favourite-products img {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .favourite-products p {
@@ -374,27 +394,28 @@ Registration Form Styling
   background-size: 100% 250%;
 }
 
-.update-registration-update-sizer h2 {
+.update-registration-content h2 {
   margin: 0;
   padding: 2% 0;
   font-size: 2.5em;
 }
 
-.update-registration-update-sizer p {
+.update-registration-content p {
   margin: 0;
   padding: 2% 2.5%;
   font-size: 1.4em;
   line-height: 1.8em;
 }
 
-.update-registration-update-sizer form {
+.update-registration-content form {
   position: relative;
   padding: 5%;
 }
 
 @media screen and (min-width: 600px) {
-  .update-registration-update-sizer {
+  .update-registration-content {
     margin: 0 auto;
+    width: 95%;
     max-width: 830px;
   }
 }
@@ -508,11 +529,11 @@ Social Media Styling
   justify-content: space-around;
 }
 
-.social-media ul li i {
+.social-media i {
   width: 10px;
 }
 
-.social-media ul li a {
+.social-media a {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
@@ -520,7 +541,7 @@ Social Media Styling
   font-family: 'Raleway Medium', sans-serif;
 }
 
-.social-media ul li a p {
+.social-media a p {
   display: none;
   margin: 0 0 0 20px;
 }
@@ -530,7 +551,7 @@ Social Media Styling
     flex-flow: column nowrap;
   }
 
-  .social-media ul li a p {
+  .social-media a p {
     display: inline-block;
   }
 }
