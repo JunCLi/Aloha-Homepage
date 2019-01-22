@@ -1,5 +1,4 @@
 (function($, window, document) {
-  
   const initializeWebpage = () => {
     $('.amount-in-cart').slideUp(1);
     $('.items-in-cart').hide();
@@ -15,6 +14,42 @@
   }
   
   initializeWebpage();
+
+  $('#logo a').on('click', () => {
+    console.log('hi');
+    $('html, body').animate({
+      scrollTop:$('.hero-banner').offset().top
+    }, 500); return false
+  });
+
+  $('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == event.currentTarget.pathname.replace(/^\//, '')
+      && 
+      location.hostname == event.currentTarget.hostname
+    ) {
+      let target = $(event.currentTarget.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top - 120
+        }, 800, () => {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+    }
+  });
 
   const updateTotalNumberInCart = (plusOrMinus = true) => {    
     const $allItemsInCart = $('.currently-in-cart');
