@@ -1,13 +1,13 @@
+/* For more details on how and why I organized my css the way I did, please read the readme */
+
 /*
 =========================
 General Styling
 =========================
 */
+/* global styles, styles that permeate throughout my css */
 
-/* html {
-  scroll-behavior: smooth;
-} */
-
+/* limit content area to 1240px width for large screens as requested in project outline */
 body {
   font-size: 14px;
   margin: 0 auto;
@@ -22,6 +22,7 @@ a:hover {
   text-decoration: none;
 }
 
+/* breakpoint to change font for tablet and desktop viewports */
 @media screen and (min-width: 600px) {
   body {
     font-size: 16px;
@@ -34,6 +35,7 @@ Header Styling
 =========================
 */
 
+/* To position header and format it's contents */
 header {
   display: flex;
   flex-flow: row wrap;
@@ -50,16 +52,17 @@ header {
   background-color: white;
 }
 
+/* Sizing my Logo */
 #logo {
   width: 35%;
   max-width: 156px;
-  scroll-behavior: smooth;
 }
 
 #logo a img {
   width: 100%;
 }
 
+/* Sizing shopping cart */
 #shopping-cart {
   position: relative;
 
@@ -72,9 +75,11 @@ header {
   width: 100%;
 }
 
+/* Styles to format total items in cart 
+The bubble should appear in upper right of shopping cart icon*/
 .items-in-cart {
   position: absolute;
-  top: 65%;
+  top: 0;
   left: 65%;
 
   margin: 0;
@@ -89,6 +94,7 @@ header {
   opacity: 0.8;
 }
 
+/* Breakpoints to change header format and logo/cart size */
 @media screen and (min-width: 600px) {
   header {
     flex-flow: row nowrap;
@@ -117,6 +123,7 @@ Navigation Styling
   width: 100%;
 }
 
+/* Formatting navigation elements + adding the line for mobile view */
 .top-nav ul {
   display: flex;
   flex-flow: row nowrap;
@@ -134,6 +141,7 @@ Navigation Styling
   text-align: center;
 }
 
+/* adding some visual elements to nagivation */
 .top-nav ul li a {
   color: #e2574c;
   font-family: 'Raleway Light', sans-serif;
@@ -141,16 +149,18 @@ Navigation Styling
   text-transform: uppercase;
 }
 
+/* removing the text turning blue from the links */
 .top-nav ul li a:hover {
   color: #e2574c;
 }
 
-
+/* changing order of header at tablet breakpoint */
 @media screen and (min-width: 600px) {
   .top-nav {
     order: 0;
   }
 
+/* removing the line for mobile, adjust padding for larger screen size */
   .top-nav ul {
     padding: 0 5%;
 
@@ -164,6 +174,7 @@ Hero Banner Styling
 =========================
 */
 
+/* give banner a background, special adjustment size and position to make it repeat and look as close to the provided images as possible */
 .hero-banner {
   position: relative;
   z-index: -2;
@@ -176,6 +187,7 @@ Hero Banner Styling
   color: white;
 }
 
+/* aligning banner text */
 .hero-banner-text {
   display: flex;
   flex-flow: column nowrap;
@@ -205,6 +217,7 @@ Hero Banner Styling
   line-height: 1em;
 }
 
+/* empty div for banner girl, separate from normal background for greater control over their visual elements. Their specific sizes, repeats, etc. Added linear gradient as an additional picture overlayed on top to darken image */
 .banner-girl {
   position: absolute;
   z-index: -1;
@@ -216,6 +229,7 @@ Hero Banner Styling
   background-size: auto 85%;
 }
 
+/* increase font size on bigger screen sizes */
 @media screen and (min-width: 600px) {
   .hero-banner h1 {
     font-size: 3.5em;
@@ -228,11 +242,13 @@ Main Styling
 =========================
 */
 
+/* specifically assign white background to cut off portions of banner girl that sticks out */
 main {
   background-color: white;
   text-align: center;
 }
 
+/* centering and positioning text */
 main article {
   margin: 0 auto;
   padding: 10% 0;
@@ -254,6 +270,7 @@ Main Products Styling
 =========================
 */
 
+/* Specific styling of 'hand crafted styles' portion */
 #info-main {
   width: 90%;
 }
@@ -267,7 +284,7 @@ Main Products Styling
   line-height: 2em;
 }
 
-/* Calculate desired width and height to maintain aspect ratio */
+/* Calculate desired width and height to maintain perfect aspect ratio. The squares will be 1:1, the rectangles will be 2:1 with a little excess to accomodate for grid gaps */
 :root {
   --wrapperWidth: 100vw;
   --gutter: 10px;
@@ -278,6 +295,7 @@ Main Products Styling
   --rowHeight: calc((var(--wrapperWidth) - (var(--noOfGutters) * var(--gutter))) / var(--noOfColumns));
 }
 
+/* initialize grid template for mobile view using the calculated dimensions */
 #main-products ul {
   width: var(--wrapperWidth);
   display: grid;
@@ -291,10 +309,12 @@ Main Products Styling
     "f f";
 }
 
+/* Initialize relative positioning for container to enable centering of text */
 #main-products li {
   position: relative;
 }
 
+/* Centering text and adding layer to darken image */
 #main-products li a {
   display: flex;
   justify-content: center;
@@ -310,6 +330,7 @@ Main Products Styling
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Add styling to category headings */
 #main-products h5 {
   color: white;
   font-family: 'Raleway Light', sans-serif;
@@ -318,6 +339,7 @@ Main Products Styling
   text-transform: uppercase;
 }
 
+/* Assign and add picture to each grid position */
 .product-men {
   grid-area: a;
 
@@ -360,6 +382,7 @@ Main Products Styling
   background-size: 100%;
 }
 
+/* Change width and height calculations to accomodate for larger screen size format. Change grid format */
 @media screen and (min-width: 600px) {
   :root {
     --noOfColumns: 4;
@@ -376,6 +399,7 @@ Main Products Styling
   }
 }
 
+/* Limit content area to 1240px width */
 @media screen and (min-width: 1240px) {
   :root {
     --wrapperWidth: 1240px;
@@ -388,6 +412,7 @@ Favourite Products Styling
 =========================
 */
 
+/* General styling and positioning of favourite products section */
 .favourite-products {
   margin-bottom: 5em;
 }
@@ -424,6 +449,7 @@ Favourite Products Styling
   font-size: 1.5em;
 }
 
+/* Styling of add to cart button */
 .add-to-cart {
   height: 0;
   padding: 5%;
@@ -435,6 +461,7 @@ Favourite Products Styling
   font-family: 'Raleway Medium', sans-serif;
 }
 
+/* Positioning and formating the amount of items in cart section */
 .amount-in-cart {
   display: flex;
   flex-flow: row nowrap;
@@ -443,6 +470,7 @@ Favourite Products Styling
   margin-top: 10px;
 }
 
+/* Styling the part where it displays the amount of items in cart */
 .amount-in-cart input {
   margin: 0 2px;
   width: 20%;
@@ -451,6 +479,7 @@ Favourite Products Styling
   text-align: center;
 }
 
+/* Styling the add to subtract from cart buttons */
 .amount-in-cart button {
   width: 25px;
 
@@ -465,6 +494,7 @@ Registration Form Styling
 =========================
 */
 
+/* Positioning and sizing of register for updates section. Linear Gradient added to darken image, special background size to get the zoomed in effect like in the website pictures */
 #update-registration {
   margin: 2% 0;
   padding: 7.5% 2%;
@@ -475,6 +505,7 @@ Registration Form Styling
   background-size: 100% 250%;
 }
 
+/* Sizing and styling of text elements */
 .update-registration-content h2 {
   margin: 0;
   padding: 2% 0;
@@ -490,12 +521,7 @@ Registration Form Styling
   line-height: 1.8em;
 }
 
-.update-registration-content form {
-  position: relative;
-
-  padding: 5%;
-}
-
+/* Limit size of content area to better match the website pictures for larger screen sizes */
 @media screen and (min-width: 600px) {
   .update-registration-content {
     margin: 0 auto;
@@ -510,11 +536,19 @@ Email Submission Styling
 =========================
 */
 
+/* Styling for form elements */
+.update-registration-content form {
+  position: relative;
+
+  padding: 5%;
+}
+
 .email-submission input {
   border: 0px solid white;
   border-radius: 50px;
 }
 
+/* Styling the enter email portion, the padding gives the element bulk */
 #user-email {
   padding: 4% 5%;
   height: 0;
@@ -524,6 +558,7 @@ Email Submission Styling
   font-family: 'Raleway Light', sans-serif;
 }
 
+/* Styling the subscribe button. Fixed it to input email element. Again use padding to give the element bulk */
 #subscribe-email {
   display: inline-block;
   position: absolute;
@@ -545,6 +580,7 @@ Footer Styling
 =========================
 */
 
+/* General footer styling and formatting */
 footer {
   display: flex;
   flex-flow: column nowrap;
@@ -565,6 +601,7 @@ footer a:hover {
   color: white;
 }
 
+/* Change how footer is formatted for larger screen sizes */
 @media screen and (min-width: 600px) {
   footer {
     flex-flow: row nowrap;
@@ -579,6 +616,7 @@ Additional Information Styling
 =========================
 */
 
+/* Formatting information part of footer to make it all vertical */
 .additional-information {
   display: flex;
   flex-flow: column nowrap;
@@ -588,6 +626,7 @@ Additional Information Styling
   font-family: 'Playfair Display Bold', sans-serif;
 }
 
+/* Adding space between information groupings, minor styling */
 .additional-information div {
   margin: 2.5% 0;
 }
@@ -596,12 +635,13 @@ Additional Information Styling
   margin: 0;
 }
 
-.fa-copyright {
-  width: 7.5%;
-}
-
 .address-information p {
   color: #969696;
+}
+
+/* Copyright icon size */
+.fa-copyright {
+  width: 7.5%;
 }
 
 /* 
@@ -610,6 +650,7 @@ Social Media Styling
 =========================
 */
 
+/* Formating of social media portion of footer */
 .social-media {
   margin: 2.5% 0;
 }
@@ -620,10 +661,12 @@ Social Media Styling
   justify-content: space-around;
 }
 
+/* Give icons a bit of width, important when we later align social media text */
 .social-media i {
   width: 10px;
 }
 
+/* Flexbox for formating social media links, horizontal for phones */
 .social-media a {
   display: flex;
   flex-flow: row nowrap;
@@ -634,12 +677,14 @@ Social Media Styling
   font-family: 'Raleway Medium', sans-serif;
 }
 
+/* Hide social media text as they will not be displayed on phones */
 .social-media a p {
   display: none;
   
   margin: 0 0 0 20px;
 }
 
+/* Change social media format from horizontal to vertical on larger screen sizes, also show social media text */
 @media screen and (min-width: 600px) {
   .social-media ul {
     flex-flow: column nowrap;

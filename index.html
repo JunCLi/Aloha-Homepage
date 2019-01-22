@@ -1,22 +1,27 @@
 <!doctype html>
 <html>
 <head>
+  <!-- Meta tags for viewport functionality, characterset, and description -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Kevin JC Li">
   <meta name="description" content="Aloha Apparel Products Homepage">
+  <!-- Title and links to external resources -->
   <title>Aloha Apparel Co.</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" type ="text/css" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <!-- Links to CSS files -->
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/font-sheet.css">
-  <link rel="stylesheet" type ="text/css" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+  <!-- Header containing logo, shop cart icon, and nav -->
   <header>
     <div id="logo">
       <a href="#top"><img src="images/aloha-logo.svg" alt="Aloha Apparel Logo"></a>
     </div>
+    <!-- Nav -->
     <nav class="top-nav">
       <ul>
         <li><a href="#info-main">About</a></li>
@@ -30,7 +35,9 @@
       <button class="items-in-cart" type="button">0</button>
     </div>
   </header>
+  <!-- Hero Banner -->
   <section class="hero-banner">
+    <!-- Empty Div to position and scale banner girl without interfering with banner background -->
     <div class="banner-girl">
     </div>
     <div class="hero-banner-text">
@@ -38,11 +45,14 @@
       <h3>New Collection</h3>
     </div>
   </section>
+  <!-- Main Section of website with product information, products, and the option to subscribe for updates -->
   <main id="products-and-info">
+    <!-- Brief explanation of products -->
     <article id="info-main">
       <h2>Hand-Crafted <span>Styles</span></h2>
       <p>Aloha Apparel Co. sells only the finest ready-to-travel clothing. Browse our current selection of products or sign-up for updates below.</p>
     </article>
+    <!-- Main menu that will lead to different product category pages -->
     <section id="main-products">
       <ul>
         <li class="product-men wide-pic">
@@ -65,16 +75,20 @@
         </li>
       </ul>
     </section>
+    <!-- Favourite Products section -->
     <article id="info-favourite">
       <h2>Most-Loved <span>Products</span></h2>
     </article>
     <section class="favourite-products">
+      <!-- List of each product along with their respective information -->
       <ul>
+        <!-- Wrapped in anchor tags. Although not strictly necessary for this project, I left them in because it makes sense to keep them there as you would expect to be led to their individual item pages if you click on them -->
         <li><a>
           <img src="images/checked-stretch-dress.jpg">
           <p class="descriptor">dresses</p>
           <h4 class="item-name">Checked Stretch Dress</h4>
           <p>$129.00</p>
+          <!-- Additional add to cart functionality to track how much of each individual items you have in the cart as well add more or subtract from the cart -->
           <button class="add-to-cart" type="button">Add to Cart</button>
           <div class="amount-in-cart">
             <button class="decrease-incart" type="button">-</button>
@@ -82,6 +96,7 @@
             <button class="increase-incart" type="button">+</button>
           </div>
         </a></li>
+        <!-- The above template is repeated for each individual product -->
         <li><a>
           <img src="images/blue-hipster-backpack.jpg">
           <p class="descriptor">bags</p>
@@ -168,10 +183,14 @@
         </a></li>
       </ul>
     </section>
+    <!-- Subscribe for updates sections -->
     <section id="update-registration"> 
+      <!-- Formating div to limit how wide the content area goes without interfering with the background image -->
       <div class="update-registration-content">
+        <!-- Description and information on subscription -->
         <h2>Sign-up for <span>Updates</span></h2>
         <p>Stay updated on our latest product releases, be first to find out about upcoming sales, and get free style tips from our blog. Unsubscribe at any time.</p>
+        <!-- Form to allow for email submission -->
         <form class="email-submission">
           <input id="user-email" name="email" type="email" placeholder="Your Email">
           <input id="subscribe-email" type="submit" value="Subscribe">
@@ -179,7 +198,9 @@
       </div>
     </section>
   </main>
+  <!-- Footer at the bottom of the page -->
   <footer>
+    <!-- Information section containing details on copyright, contact information, and address -->
     <div class="additional-information">
       <div class="copyright-and-powered">
         <p><i class="far fa-copyright"></i>2016 Aloha Apparal Co.</p>
@@ -194,6 +215,7 @@
         <p>Vancouver, BC, Canada</p>
       </div>
     </div>
+    <!-- Social Media section to get connected with Aloha -->
     <div class="social-media">
       <ul>
         <li><a href="#">
@@ -219,6 +241,7 @@
       </ul>
     </div>
   </footer>
+  <!-- Links to JQuery, Flickity Javascript, and main Javascript -->
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
