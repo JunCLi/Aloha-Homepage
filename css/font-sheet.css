@@ -1,3 +1,5 @@
+/* Add fonts to file and make them usable via fontface */
+
 @font-face {
   font-family: 'Raleway Medium Italic';
   src: url('../fonts/Raleway-MediumItalic.eot');
